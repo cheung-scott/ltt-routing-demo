@@ -100,11 +100,12 @@ def ltt_select_tau(df_cal: pd.DataFrame, alpha: float, delta: float) -> float:
         emp_risk = loss_at_tau(df_cal, tau).mean()
         ucb      = emp_risk + eps
         if ucb <= alpha:
-            chosen_tau = tau
+            chosen_tau = tau   # accepted — keep walking to more aggressive taus
         else:
-            break
+            break              # first rejection — stop; no Bonferroni needed because
+                               # sequential stopping controls family-wise error at delta
 
-    return chosen_tau
+    return chosen_tau  # if no tau ever accepted, returns 1.0 (route nothing to cheap)
 
 
 # %% [markdown]

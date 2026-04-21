@@ -17,10 +17,19 @@ LTT reframes this as a multiple-hypothesis-testing problem over a grid of candid
 ## Run it
 
 ```bash
-pip install -r requirements.txt
+pip install numpy pandas matplotlib
 python ltt_demo.py     # run as script
 # or open ltt_demo.py in VS Code / Jupyter — it uses `# %%` cell markers
 ```
+
+Expected output:
+```
+Chosen tau               = 0.53
+Test risk                = 0.0598  (target alpha = 0.1)
+Fraction routed to cheap = 47.2%
+```
+
+Also saves `risk_vs_tau.png` to the working directory — empirical calibration risk curve with the chosen threshold and alpha budget marked.
 
 ## Context
 
