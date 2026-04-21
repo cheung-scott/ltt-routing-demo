@@ -24,4 +24,4 @@ python ltt_demo.py     # run as script
 
 ## Context
 
-Written as preparation for a KURF 2026 fellowship application on LLM routing with Dr Nicola Paoletti. Goal: make the LTT mechanics concrete in code before starting the real project.
+Built while studying Learn-Then-Test ahead of applying for a research fellowship on LLM routing. Goal: make the calibration pipeline concrete in code — loss function, Hoeffding UCB, fixed-sequence selection — rather than just following the maths on paper.
